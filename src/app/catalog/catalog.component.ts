@@ -189,6 +189,13 @@ export class CatalogComponent {
   ]
  }
 
+ getDiscountedClasses(product : IProduct){
+  // return { strikethrough: product.discount > 0 };
+  //alternatively
+  if(product.discount > 0) return ["strikethrough"] //you can add more classes if you have
+  else return [];
+ }
+
  getImageUrl(product: IProduct){
   return '/assets/images/robot-parts/' + product.imageName ;
  }
